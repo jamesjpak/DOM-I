@@ -38,7 +38,88 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-wat
+
+// selectors
+
+let nav = document.querySelector('nav');
+let navItems = nav.querySelectorAll('a');
+
+
+for (let i = 0; i < navItems.length; i++) {
+  
+  navItems[i].textContent = siteContent.nav[`nav-item-${i + 1}`]
+  navItems[i].style.color = "green";
+  
+}
+
+
+
+//create new nav item 
+let newNavItem1 = document.createElement("a");
+newNavItem1.textContent = "Team";
+newNavItem1.style.color = "green";
+nav.appendChild(newNavItem1);
+
+let newNavItem2 = document.createElement("a");
+newNavItem2.textContent = "WAaaaaAT";
+newNavItem2.style.color = "green";
+nav.prepend(newNavItem2);
+
+
+let cta = document.querySelector(".cta")
+
+let ctaMain = document.querySelector('.cta .cta-text h1');
+ctaMain.textContent = siteContent["cta"]["h1"];
+
+let ctaButton = document.querySelector(".cta .cta-text button")
+  ctaButton.textContent = siteContent["cta"]["button"];
+
+
+
+
+let topH4 = document.querySelectorAll(".top-content h4");
+let topParagraphs = document.querySelectorAll(".top-content p");
+
+topH4[0].textContent = siteContent["main-content"]["features-h4"];
+topH4[1].textContent = siteContent["main-content"]["about-h4"];
+topParagraphs[0].textContent = siteContent["main-content"]["features-content"]
+topParagraphs[1].textContent = siteContent["main-content"]["about-content"]
+
+
+// attribute pics 
+let logo = document.getElementById("logo-img");
+  logo.setAttribute("src", siteContent["nav"]["img-src"]);
+  
+
+
+const circlePic = document.getElementById("cta-img");
+  circlePic.src = 'img/header-img.png';
+  circlePic.alt = "pic of circle with random code";
+
+
+const middlePic = document.getElementById("middle-img");
+  middlePic.src = 'img/mid-page-accent.jpg';
+  middlePic.alt = "picture in center of page";
+
+
+
+// make text green
+const greenifyNav = document.querySelectorAll('a');
+  greenifyNav.forEach( function( currentValue) {
+    currentValue.style.color = 'green';
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
