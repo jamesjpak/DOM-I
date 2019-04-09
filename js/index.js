@@ -87,6 +87,16 @@ topParagraphs[0].textContent = siteContent["main-content"]["features-content"]
 topParagraphs[1].textContent = siteContent["main-content"]["about-content"]
 
 
+let botH4 = document.querySelectorAll(".bottom-content h4");
+let botParagraphs = document.querySelectorAll(".bottom-content p");
+
+botH4[0].textContent = siteContent["main-content"]["services-h4"];
+botH4[1].textContent = siteContent["main-content"]["product-h4"];
+botH4[2].textContent = siteContent["main-content"]["vision-h4"];
+botParagraphs[0].textContent = siteContent["main-content"]["services-content"];
+botParagraphs[1].textContent = siteContent["main-content"]["product-content"];
+botParagraphs[2].textContent = siteContent["main-content"]["vision-content"];
+
 // attribute pics 
 let logo = document.getElementById("logo-img");
   logo.setAttribute("src", siteContent["nav"]["img-src"]);
