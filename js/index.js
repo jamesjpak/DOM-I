@@ -97,6 +97,19 @@ botParagraphs[0].textContent = siteContent["main-content"]["services-content"];
 botParagraphs[1].textContent = siteContent["main-content"]["product-content"];
 botParagraphs[2].textContent = siteContent["main-content"]["vision-content"];
 
+let contactHeader = document.querySelector(".contact h4");
+let contactParagraph = document.querySelectorAll(".contact p");
+
+contactHeader.textContent = siteContent["contact"]["contact-h4"];
+contactParagraph[0].textContent = siteContent["contact"]["address"];
+contactParagraph[1].textContent = siteContent["contact"]["phone"];
+contactParagraph[2].textContent = siteContent["contact"]["email"];
+
+
+let footerX = document.querySelector("footer");
+
+footerX.textContent = siteContent["footer"]["copyright"];
+
 // attribute pics 
 let logo = document.getElementById("logo-img");
   logo.setAttribute("src", siteContent["nav"]["img-src"]);
